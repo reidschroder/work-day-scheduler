@@ -6,6 +6,10 @@ $(".saveBtn").click(function(){
     localStorage.setItem(hour, text)
 })
 
+$(document).ready(function () {
+    $("#currentDay").text("Today is " + moment().format("MMM Do YY"));
+  });
+
 $("textarea").each(function(){
     var textareaHour = parseInt($(this).attr("id"))
     var currentHour = moment().hours()
